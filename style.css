@@ -6,7 +6,6 @@ html,
 body {
   --black: hsl(240, 6%, 13%);
   --gray: hsl(240, 9%, 89%);
-
   height: 100%;
   font-family: 'Roboto', sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -18,17 +17,21 @@ body {
 }
 
 main {
-  background: url(images/background.svg);
-  width: 375px;
-  height: 812px;
+  background: url(images/background.svg) no-repeat center/cover;
+  width: 100vw;
+  min-height: 812px;
+  height: 100vh;
 }
+
+/* main:hover {
+  transform: rotateY(20deg);
+} */
 
 .container {
   max-width: 250px;
   margin-left: auto;
   margin-right: auto;
   text-align: center;
-
   color: var(--gray);
 }
 
@@ -53,18 +56,56 @@ main {
   clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
 }
 
+/* Faz o controle do responsivo para dispositivos acima de 600px até min 1200px*/
+
+@media only screen and (min-width: 600px) {
+  main {
+    background: url(images/backgroundDesktop.svg) no-repeat center/cover;
+  }
+  .avatar {
+    margin: 15.6rem auto 0;
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  main {
+    background: url(images/backgroundDesktop.svg) no-repeat center/cover;
+  }
+  .avatar {
+    margin: 15.6rem auto 0;
+  }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  main {
+    background: url(images/backgroundDesktop.svg) no-repeat center/cover;
+  }
+  .avatar {
+    margin: 15.6rem auto 0;
+  }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  main {
+    background: url(images/backgroundDesktop.svg) no-repeat center/cover;
+  }
+  .avatar {
+    margin: 14.3rem auto 0;
+  }
+}
+
 h1 {
   font-size: 1.5rem;
-
   margin-top: 1.5rem;
 }
 
 a {
   color: var(--gray);
   text-decoration: none;
-
   margin-top: 0.25rem;
-
   display: flex;
   gap: 0.75rem;
   justify-content: center;
@@ -79,9 +120,53 @@ ul {
   margin-top: 4rem;
   list-style: none;
   padding: 0;
-
   display: flex;
   gap: 0.5rem;
-
   justify-content: center;
+}
+
+.youtube img {
+  -webkit-transition: all 0.1s ease;
+  transition: all 0.1s ease;
+}
+.youtube img:hover {
+  -webkit-transform: scale(1.2);
+  transform: scale(1.2);
+  border-radius: 0.5rem;
+  border-style: solid;
+  border-color: red;
+}
+
+.facebook img {
+  -webkit-transition: all 0.1s ease;
+  transition: all 0.1s ease;
+}
+.facebook img:hover {
+  -webkit-transform: scale(1.2);
+  transform: scale(1.2);
+  border-radius: 0.5rem;
+  border-style: solid;
+  border-color: rgb(0, 8, 255);
+}
+.instagram img {
+  -webkit-transition: all 0.1s ease;
+  transition: all 0.1s ease;
+}
+.instagram img:hover {
+  -webkit-transform: scale(1.2);
+  transform: scale(1.2);
+  border-radius: 0.5rem;
+  border-style: solid;
+  border-color: rgb(197, 49, 38);
+}
+.twitter img {
+  -webkit-transition: all 0.1s ease;
+  transition: all 0.1s ease;
+}
+.twitter img:hover {
+  -webkit-transform: scale(1.2);
+  transform: scale(1.2);
+  border-radius: 0.5rem;
+  border-style: solid;
+  border-color: rgb(31, 96, 237);
 }
